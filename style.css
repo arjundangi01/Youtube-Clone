@@ -1,0 +1,156 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+#container{
+    display: flex;
+    margin-top: 70px;
+    margin-right: 20px;
+    /* border: 1px solid #000; */
+}
+
+
+
+
+
+
+
+
+/* -----------------sidebar------------- */
+#sidebar{
+    width: 310px;
+    position: fixed;
+    /* border: 1px solid #000; */
+}
+.hover:hover{
+    background-color: rgba(128, 128, 128, 0.292);
+}
+
+#sidebar >div{
+    /* border: 1px solid #000; */
+    width: 200px;
+    margin-left: 15px;
+  
+}
+#sidebar >div div{
+    display: flex;
+    height: 42px;
+    border-radius: 10px;
+    padding-left: 3px;
+    align-items: center;
+    padding-left: 15px;
+   
+
+}
+#sidebar >div h4{
+    margin: 2px 2px 2px 30px;
+    font-weight: 600;
+
+}
+.newSection{
+    margin: 10px 2px 2px 30px;
+    
+}
+hr{
+    margin-top: 10px;
+    margin-left: -13px;
+}
+
+
+
+/* filter */
+#filter{
+    /* margin-left: 290px; */
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+.color{
+    padding: 7px 10px 7px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0,0,0.3);
+    background-color: rgba(128, 128, 128, 0.106);
+
+}
+#parent .clicked{
+   
+    background-color: rgba(128, 128, 128, 0.362);
+
+}
+.color:hover{
+   
+    background-color: rgba(128, 128, 128, 0.362);
+
+
+}
+
+
+/* -------------------------- */
+#content{
+    /* margin-left: 290px; */
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px 20px;
+    /* border: 1px solid #000; */
+}
+#content>div{
+    /* border: 1px solid #000; */
+    /* display: flex; */
+   
+}
+#content>div img{
+    width: 100%;
+    border-radius: 10px;
+}
+#content>div h5{
+  margin-top: 10px;
+}
+.name-div{
+    display: flex;
+    /* border: 1px solid #000; */
+    margin-top: -5px;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 84px;
+   
+    /* border: 1px solid #000; */
+}
+
+
+
+
+
+
+
+
+/* -----------------------search */
+#parent{
+   margin-left: 350px;
+
+}
+#sContent{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   
+}
+.child-div{
+    /* width: 80%; */
+    display: flex;
+    gap: 15px;
+    text-align: justify;
+    /* border: 1px solid #000; */
+}
+#sContent>div img{
+    width: 100%;
+    border-radius: 10px;
+}
+.name2-div{
+    /* border: 1px solid #000; */
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

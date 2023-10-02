@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script
+      src="https://kit.fontawesome.com/ab7e10d51f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>YouTube</title>
+  </head>
+  <body>
+    <nav>
+      <div id="navbar">
+        <div id="logo">
+          <i class="fa-solid fa-bars" style="color: #0d0d0d"></i>
+          
+         <img id="logo-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3ElEQVR4Ae2WIQzDIBBFEdPV6Ip6L2Y3Me9NMzuB98GbWrysqHf1otWYismm+vYFTRCEhXXjJrjkmSslLwHgi8vjxkoRKAL/J0BCSHAHGhjQgxHMwIKnY/Px+taNHd2/Bmg3p4wKuIH0Y1RQAB+ugDJxDgn0GQVMSMBmFJhDApSTYwLLQtR13xNAo0oWINS6ErXtpxInX0CmC3g1TURNkypQ+QL1IYG9hiFFRPIL8C8B/ybkO4bsFxH7Vcz+GLE/x5yBRL+LZDVQkTi2Ochn70dimQpFspKKi0AReAF/IVUTZ3/BGQAAAABJRU5ErkJggg==" alt="">
+        </div>
+        <div id="search-div">
+          <input  placeholder="Search" type="text" name="" id="search-item" />
+          <button id="search-btn">
+            <i class="fa-solid fa-magnifying-glass" style="color: #0c0d0d"></i>
+          </button>
+        </div>
+        <div id="profile">
+          <div>
+            <i class="fa-solid fa-upload" style="color: #19191a"></i>
+          </div>
+          <div>
+            <i class="fa-regular fa-bell" style="color: #0f0f10"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-circle-user" style="color: #0a0a0b"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="container">
+      <div id="sidebar">
+            <div class="section1">
+              <div class="hover" >
+                <i class="fa-solid fa-house" style="color: #000000;"></i>
+                <h4>Home</h4>
+              </div>
+              <div class="hover">
+                <i class="fa-solid fa-video" style="color: #0f0f0f;"></i>
+                <h4>Your Videos</h4>
+
+              </div>
+              <div class="hover">
+                <i class="fa-regular fa-thumbs-up" style="color: #0a0a0b;"></i>
+                <h4>Liked</h4>
+
+              </div>
+            <hr>
+
+            </div>
+            <div class="section1">
+              <div class="hover" >
+                <i class="fa-regular fa-clock" style="color: #0d0d0d;"></i>
+                <h4>Watch leter</h4>
+              </div>
+              <div class="hover">
+                <i class="fa-solid fa-clock-rotate-left" style="color: #000000;"></i>
+                <h4>History</h4>
+
+              </div>
+              <div class="hover">
+                <i class="fa-solid fa-download" style="color: #000000;"></i>
+                <h4>Downloads</h4>
+
+              </div>
+            <hr>
+
+            </div>
+            <h3 class="newSection" >Explore</h3>
+            <div class="section1">
+              <div class="hover" >
+                <i class="fa-solid fa-arrow-trend-up" style="color: #000000;"></i>
+                <h4>Trending</h4>
+              </div>
+              <div class="hover">
+                <i class="fa-solid fa-bag-shopping" style="color: #050505;"></i>
+                <h4>Shopping</h4>
+
+              </div>
+              <div class="hover">
+                <i class="fa-solid fa-music" style="color: #050505;"></i>
+                <h4>Music</h4>
+
+              </div>
+              <div class="hover">
+                <i class="fa-solid fa-gamepad" style="color: #000000;"></i>
+                <h4>Gaming</h4>
+
+              </div>
+              <div class="hover">
+                <i class="fa-regular fa-newspaper" style="color: #000000;"></i>
+                <h4>News</h4>
+
+              </div>
+              <div class="hover">
+                <i class="fa-solid fa-trophy" style="color: #0f0f10;"></i>
+                <h4>Sports</h4>
+
+              </div>
+              <div class="hover">
+                <i class="fa-solid fa-graduation-cap" style="color: #121212;"></i>
+                <h4>Learning</h4>
+
+              </div>
+            <hr>
+
+            </div>
+            <div class="section1">
+              <div class="hover" >
+                <i class="fa-solid fa-gear" style="color: #0c0d0d;"></i>
+                <h4>Setting</h4>
+              </div>
+              <div class="hover">
+                <i class="fa-regular fa-message" style="color: #000000;"></i>
+                <h4>Feedback</h4>
+
+              </div>
+              <div class="hover">
+                <i class="fa-solid fa-circle-info" style="color: #000000;"></i>
+                <h4>Help</h4>
+
+              </div>
+            
+
+            </div>
+      </div>
+      <div id="parent" >
+        <div id="filter">
+          <button value="long" class="color clicked" >All</button>
+          <button value="short" class="color" >shorts</button>
+          <button value="date" class="color">latest</button>
+        </div>
+        <div  id="content" class="select-c" >
+
+        </div>
+        
+      </div>
+
+    </div>
+  </body>
+</html>
+<script src="./index.js" ></script>

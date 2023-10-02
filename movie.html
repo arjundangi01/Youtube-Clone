@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./nav.css" />
+    <link rel="stylesheet" href="./movie.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <script
+    src="https://kit.fontawesome.com/ab7e10d51f.js"
+    crossorigin="anonymous"
+  ></script>
+  </head>
+  <body>
+    <nav>
+      <div id="navbar">
+        <div id="logo">
+          <i class="fa-solid fa-bars" style="color: #0d0d0d"></i>
+          <a href="./index.html"> <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3ElEQVR4Ae2WIQzDIBBFEdPV6Ip6L2Y3Me9NMzuB98GbWrysqHf1otWYismm+vYFTRCEhXXjJrjkmSslLwHgi8vjxkoRKAL/J0BCSHAHGhjQgxHMwIKnY/Px+taNHd2/Bmg3p4wKuIH0Y1RQAB+ugDJxDgn0GQVMSMBmFJhDApSTYwLLQtR13xNAo0oWINS6ErXtpxInX0CmC3g1TURNkypQ+QL1IYG9hiFFRPIL8C8B/ybkO4bsFxH7Vcz+GLE/x5yBRL+LZDVQkTi2Ochn70dimQpFspKKi0AReAF/IVUTZ3/BGQAAAABJRU5ErkJggg=="
+            alt=""
+          /></a>
+        </div>
+        <div id="search-div">
+          <input placeholder="Search" type="text" name="" id="search-item" />
+          <button id="search-btn">
+            <i class="fa-solid fa-magnifying-glass" style="color: #0c0d0d"></i>
+          </button>
+        </div>
+        <div id="profile">
+          <div>
+            <i class="fa-solid fa-upload" style="color: #19191a"></i>
+          </div>
+          <div>
+            <i class="fa-regular fa-bell" style="color: #0f0f10"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-circle-user" style="color: #0a0a0b"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="container">
+      <div id="movieDiv">
+        <iframe
+          id="frame"
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/Ou7rv0XXB58"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      
+        <div id="name">
+          <h3 id="nameV" > </h3>
+          <h3 id="channel" > </h3>
+
+        </div>
+      </div>
+      <div id="sidebar">
+        <div class="section">
+          <div class="small-video"></div>
+          <div class="small-content">
+            <h5></h5>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var id = localStorage.getItem("videoId");
+  let array = JSON.parse(localStorage.getItem("videoArray"));
+  let nameV= localStorage.getItem("videoName");
+  let channelName= localStorage.getItem("channelName");
+
+  var frame = document.getElementById("frame");
+
+  frame.src = `https://www.youtube.com/embed/${id}`;
+  var nameVid = document.getElementById("nameV");
+  var channel= document.getElementById("channel");
+  channel.textContent = channelName;
+  nameVid.textContent = nameV;
+
+  display(array);
+  console.log(array);
+  function display(array) {
+    var content = document.getElementById("sidebar");
+    content.innerHTML = "";
+
+    var arr = array.slice(10);
+
+    arr.forEach(function (element) {
+
+      var section = document.createElement("div");
+      var imgDiv = document.createElement("div");
+      var img = document.createElement("img");
+      img.src = element.snippet.thumbnails.medium.url;
+      var nameDiv = document.createElement("div");
+      var name = document.createElement("h5");
+      name.textContent = element.snippet.title;
+      var channel = document.createElement("p");
+      channel.textContent = "";
+
+      img.addEventListener("click", function () {
+      localStorage.setItem("videoId", element.id.videoId);
+      localStorage.setItem("videoName", element.snippet.title );
+      localStorage.setItem("channelName", element.snippet.channelTitle );
+      
+      
+      localStorage.setItem("videoArray", JSON.stringify(array));
+      
+      window.location.assign("./movie.html")
+    })
+
+
+
+
+      imgDiv.append(img);
+      nameDiv.append(name, channel);
+      section.append(imgDiv, nameDiv);
+      imgDiv.setAttribute("class", "img-div");
+      nameDiv.setAttribute("class", "name-div");
+      section.setAttribute("class", "sections");
+      content.append(section);
+    });
+  }
+</script>
